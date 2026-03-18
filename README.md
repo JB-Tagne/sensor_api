@@ -1,5 +1,7 @@
-Sensor API
-Description
+# Sensor API
+
+## Description
+
 Sensor API est une API REST développée avec FastAPI qui simule le trafic de clients dans différents magasins. Chaque magasin possède plusieurs capteurs à l’entrée qui permettent de générer le nombre de visiteurs pour une date donnée. Ce projet permet de simuler la fréquentation des magasins et de tester la fiabilité de l’API pour prendre des décisions sur la gestion des flux clients. L’API prend en compte :
 
 La variabilité normale du trafic par capteur
@@ -12,7 +14,8 @@ La possibilité de consulter les visites par magasin ou par capteur
 
 Ce projet est conçu pour démontrer la gestion de données simulées, la création d’API REST, les tests unitaires et le déploiement sur Render.
 
-Fonctionnalités principales
+## Fonctionnalités principales
+
 Obtenir le trafic total d’un magasin pour une date donnée
 
 Obtenir le trafic d’un capteur spécifique
@@ -23,7 +26,8 @@ Validation des entrées (date, année, capteur)
 
 Endpoint de healthcheck pour vérifier si l’API fonctionne correctement
 
-Structure du projet
+## Structure du projet
+
 sensor_api/
 │
 ├─ .github/workflows/ci.yaml       # Configuration CI GitHub Actions
@@ -36,29 +40,31 @@ sensor_api/
 └─ tests/
     ├─ test_visit_sensor.py        # Tests unitaires pour VisitSensor
     └─ test_store_methods.py       # Tests unitaires pour StoreSensor
-Installation
-Cloner le projet :
+
+## Installation
+
+### Cloner le projet :
 git clone https://github.com//sensor_api.git cd sensor_api
 
-Créer un environnement virtuel et l’activer :
+### Créer un environnement virtuel et l’activer :
 python3 -m venv .venv source .venv/bin/activate # Linux / macOS .venv\Scripts\activate # Windows
 
-Installer les dépendances :
+### Installer les dépendances :
 pip install -r requirements.txt Lancer l’API uvicorn app:app --reload
 
-L’API sera accessible à l’adresse :
+### L’API sera accessible à l’adresse :
 http://127.0.0.1:8000
 
 La documentation interactive Swagger : http://127.0.0.1:8000/docs
 
-Endpoints
+### Endpoints
 Obtenir le trafic d’un magasin GET /
 
-Paramètres query :
+### Paramètres query :
 
 Paramètre Type Description store_name str Nom du magasin (Lille, Paris, Lyon, Toulouse, Marseille) year int Année (>= 2019) month int Mois day int Jour sensor_id int, optionnel ID du capteur (0 à 7)
 
-Exemple :
+## Exemple :
 
 curl -G https://sensor-api-1-upv8.onrender.com
 -d "store_name=Lille"
@@ -66,14 +72,14 @@ curl -G https://sensor-api-1-upv8.onrender.com
 -d "month=9"
 -d "day=15"
 
-Healthcheck :
+## Healthcheck :
 https://sensor-api-1-upv8.onrender.com/health
 
 Permet de vérifier que l’API fonctionne correctement
 
 Retourne également la version de Python utilisée
 
-Tests unitaires
+## Tests unitaires
 Les tests utilisent le module unittest :
 
 tests/test_visit_sensor.py : tests pour VisitSensor
@@ -84,5 +90,5 @@ Exécuter tous les tests :
 
 python -m unittest discover tests
 
-Déploiement
+## Déploiement
 L’API est déployée sur Render : https://sensor-api-1-upv8.onrender.com
