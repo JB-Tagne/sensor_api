@@ -4,7 +4,6 @@ import numpy as np
 
 from fake_data_app.sensor import VisitSensor
 
-
 class StoreSensor:
     def __init__(
         self,
