@@ -3,7 +3,6 @@ from datetime import date, timedelta
 
 import numpy as np
 
-
 class VisitSensor:
     """
     Simulates a sensor at the entrance of a mall.
