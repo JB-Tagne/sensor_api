@@ -3,7 +3,6 @@ from datetime import date
 
 from fake_data_app.store import StoreSensor
 
-
 class TestStore(unittest.TestCase):
     def test_get_all_traffic(self):
         lille_store = StoreSensor("Lille", 1200, 300)
