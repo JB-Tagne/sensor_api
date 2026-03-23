@@ -2,7 +2,6 @@ from datetime import date
 
 from fake_data_app.store import StoreSensor
 
-
 def create_app() -> dict:
     """
     Create the available stores in our API
