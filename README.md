@@ -44,7 +44,8 @@ sensor_api/
 ## Installation
 
 ### Cloner le projet :
-git clone https://github.com//sensor_api.git cd sensor_api
+git clone [https://github.com/JB-Tagne/sensor_api.git](https://github.com/JB-Tagne/sensor_api.git)
+cd sensor_api
 
 ### Créer un environnement virtuel et l’activer :
 python3 -m venv .venv source .venv/bin/activate # Linux / macOS .venv\Scripts\activate # Windows
@@ -52,17 +53,18 @@ python3 -m venv .venv source .venv/bin/activate # Linux / macOS .venv\Scripts\ac
 ### Installer les dépendances :
 pip install -r requirements.txt Lancer l’API uvicorn app:app --reload
 
-### L’API sera accessible à l’adresse :
-http://127.0.0.1:8000
+### API Live
+URL de base : https://data-upskilling-fake-sensor-api.onrender.com
 
-La documentation interactive Swagger : http://127.0.0.1:8000/docs
-
-### Endpoints
-Obtenir le trafic d’un magasin GET /
-
-### Paramètres query :
-
-Paramètre Type Description store_name str Nom du magasin (Lille, Paris, Lyon, Toulouse, Marseille) year int Année (>= 2019) month int Mois day int Jour sensor_id int, optionnel ID du capteur (0 à 7)
+Endpoint Principal : GET /
+Paramètres attendus :
+| Paramètre | Type | Description |
+| :--- | :--- | :--- |
+| store_name | str | Nom du magasin (Lille, Paris, Lyon, Toulouse, Marseille) |
+| year | int | Année (ex: 2026) |
+| month | int | Mois (1-12) |
+| day | int | Jour |
+| sensor_id | int | (Optionnel) ID spécifique du capteur (0-7) |
 
 ## Exemple :
 
@@ -71,13 +73,6 @@ curl -G https://sensor-api-1-upv8.onrender.com
 -d "year=2023"
 -d "month=9"
 -d "day=15"
-
-## Healthcheck :
-https://sensor-api-1-upv8.onrender.com/health
-
-Permet de vérifier que l’API fonctionne correctement
-
-Retourne également la version de Python utilisée
 
 ## Tests unitaires
 Les tests utilisent le module unittest :
@@ -91,4 +86,4 @@ Exécuter tous les tests :
 python -m unittest discover tests
 
 ## Déploiement
-L’API est déployée sur Render : https://sensor-api-1-upv8.onrender.com
+L’API est déployée sur Render : [https://sensor-api-1-upv8.onrender.com](https://data-upskilling-fake-sensor-api.onrender.com)
