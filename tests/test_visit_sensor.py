@@ -3,7 +3,6 @@ from datetime import date
 
 from fake_data_app.sensor import VisitSensor
 
-
 class TestVisitSensor(unittest.TestCase):
     def test_weekdays_open(self):
         for test_day in range(11, 17):
