@@ -68,11 +68,11 @@ Paramètres attendus :
 
 ## Exemple :
 
-curl -G https://sensor-api-1-upv8.onrender.com
--d "store_name=Lille"
--d "year=2023"
--d "month=9"
--d "day=15"
+curl -G [https://data-upskilling-fake-sensor-api.onrender.com](https://data-upskilling-fake-sensor-api.onrender.com) \
+    -d "store_name=Paris" \
+    -d "year=2026" \
+    -d "month=3" \
+    -d "day=23"
 
 ## Tests unitaires
 Les tests utilisent le module unittest :
