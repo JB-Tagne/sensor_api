@@ -8,7 +8,6 @@ from fake_data_app import create_app
 store_dict = create_app()
 app = FastAPI()
 
-
 @app.get("/")
 def visit(
     store_name: str, year: int, month: int, day: int, sensor_id: int | None = None
